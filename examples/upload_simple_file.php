@@ -21,7 +21,7 @@ $token = $auth->uploadToken($bucket);
 
 // 要上传文件的本地路径
 //$filePath = './php-logo.png';
-$filePath = '/Users/jingliu/Desktop/idcard.md';
+$filePath = '/Users/jingliu/Desktop/1.md';
 
 // 上传到七牛后保存的文件名
 //$key = 'my-php-logo.png';

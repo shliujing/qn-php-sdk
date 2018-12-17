@@ -135,7 +135,7 @@ final class Auth
     public function authorization($url, $body = null, $contentType = null)
     {
         $authorization = 'QBox ' . $this->signRequest($url, $body, $contentType);
-        return array('Authoprization' => $authorization);
+        return array('Authorization' => $authorization);
     }
 
     public function authorizationV2($url, $method, $body = null, $contentType = null)
