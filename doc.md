@@ -14,10 +14,17 @@ host+uri
 
 ![](http://i.iamlj.com/18-12-17/39061649.jpg)
 
+## 7.1.3版本的上传
+
+![](http://i.iamlj.com/18-12-24/80530303.jpg)
 
 ## ocr
 
-[demo](https://github.com/shliujing/qn-php-sdk/blob/master/examples/lj/ai/ocr_idcard.php)
+[demo](https://github.com/shliujing/qn-php-sdk/blob/master/lj/ai/ocr_idcard.php)
 
 执行结果
 ![](http://i.iamlj.com/18-12-20/14025507.jpg)
+
+## 上传+数据处理
+
+![](http://i.iamlj.com/19-1-4/44593326.jpg)

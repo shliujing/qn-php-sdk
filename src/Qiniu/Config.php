@@ -28,7 +28,7 @@ final class Config
     public function __construct(Zone $z = null)
     {
         $this->zone = $z;
-        $this->useHTTPS = false;
+        $this->useHTTPS = true;
         $this->useCdnDomains = false;
         $this->zoneCache = array();
     }
