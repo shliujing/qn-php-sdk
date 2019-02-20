@@ -15,14 +15,21 @@ $bucket = "test-pub";
 // 构建鉴权对象
 $auth = new Auth($accessKey, $secretKey);
 
-// 生成上传 Token
-$token = $auth->uploadToken($bucket);
-
 // 要上传文件的本地路径
 $filePath = '/Users/jingliu/Desktop/test-desktop.png';
 
 // 上传到七牛后保存的文件名
-$key = 'test/png/2.png';
+$key = 'test/png/0129/2.png';
+
+//带回调业务服务器的凭证（application/json）
+$policy = array(
+    'callbackUrl' => 'http://practice.dandantuan.com/demo/qiniu/qiniu_sdk_notify.php',
+    'callbackBody' => '{"key":"$(key)","hash":"$(etag)","fsize":$(fsize),"bucket":"$(bucket)","name":"$(x:name)"}',
+    'callbackBodyType' => 'application/json'
+);
+
+// 生成上传 Token
+$token = $auth->uploadToken($bucket, $key, 3600, $policy);
 
 // 初始化 UploadManager 对象并进行文件的上传。
 $uploadMgr = new UploadManager();

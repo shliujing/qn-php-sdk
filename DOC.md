@@ -6,6 +6,10 @@ host+uri
 
 ![](http://img-lj.oss-cn-hangzhou.aliyuncs.com/18-8-15/80844127.jpg)
 
+
++ 回调+文件名
+![](https://i.iamlj.com/19-01-21-0edbf04af947cb8c071168f37f2901ef.png)
+
 ## 多码率自适应
 
 ## drm 加密
@@ -28,3 +32,13 @@ host+uri
 ## 上传+数据处理
 
 ![](http://i.iamlj.com/19-1-4/44593326.jpg)
+
+## 转码
+
+![](https://i.iamlj.com/19-01-21-4b9dd1d08af617b0adf646b3004b7cac.png)
+
+
+## 视频截取
+
+![](https://i.iamlj.com/19-01-29/151624.png)
+
