@@ -6,9 +6,12 @@ host+uri
 
 ![](http://img-lj.oss-cn-hangzhou.aliyuncs.com/18-8-15/80844127.jpg)
 
-
 + 回调+文件名
 ![](https://i.iamlj.com/19-01-21-0edbf04af947cb8c071168f37f2901ef.png)
+
+## fetch
+
+![](https://i.iamlj.com/19-03-06/115352.png)
 
 ## 多码率自适应
 
@@ -31,9 +34,14 @@ host+uri
 
 ## 上传+数据处理
 
+图片
 ![](http://i.iamlj.com/19-1-4/44593326.jpg)
+视频
+![](https://i.iamlj.com/19-02-26/112824.png)
 
 ## 转码
+
+[demo](https://github.com/shliujing/qn-php-sdk/blob/master/lj/dora/pfop_video_avthumb.php)
 
 ![](https://i.iamlj.com/19-01-21-4b9dd1d08af617b0adf646b3004b7cac.png)
 
@@ -42,3 +50,6 @@ host+uri
 
 ![](https://i.iamlj.com/19-01-29/151624.png)
 
+## 添加水印
+
+![](https://i.iamlj.com/19-02-20/102642.png)

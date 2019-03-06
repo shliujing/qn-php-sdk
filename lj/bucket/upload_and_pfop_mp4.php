@@ -11,17 +11,17 @@ $pipeline = getenv('QINIU_TEST_PIPELINE');
 $auth = new Auth($accessKey, $secretKey);
 
 // 在七牛保存的文件名
-$key = 'png/php/0104/test.png';
+$key = 'test/mp4/0226/11.mp4';
 
-// 数据处理后的图片名
-$newKey = 'png/php/0104/fop-test.png';
+// 数据处理后的文件名
+$newKey = 'test/mov/0226/11.mov';
 
 // 要上传文件的本地路径
-$filePath = '/Users/jingliu/Desktop/test-desktop.png';
+$filePath = '/Users/jingliu/Desktop/11.mp4';
 
 $uploadMgr = new UploadManager();
 
-$pfop = "imageMogr2/rotate/90|saveas/" . \Qiniu\base64_urlSafeEncode($bucket . ":" . $newKey);
+$pfop = "avthumb/mov|saveas/" . \Qiniu\base64_urlSafeEncode($bucket . ":" . $newKey);
 
 //转码完成后通知到你的业务服务器。（公网可以访问，并相应200 OK）
 $notifyUrl = 'http://practice.dandantuan.com/demo/qiniu/qiniu_sdk_notify.php';

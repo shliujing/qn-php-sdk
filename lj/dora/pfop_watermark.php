@@ -14,13 +14,13 @@ $auth = new Auth($accessKey, $secretKey);
 
 //要转码的文件所在的空间和文件名。
 $key = '11.mp4';
-$newKey = 'qiniu_wm.mp4';
+$newKey = 'test/0120/qiniu_wm.mp4';
 
 //转码是使用的队列名称。 https://portal.qiniu.com/mps/pipeline
 $pipeline = '12349';
 
 //转码完成后通知到你的业务服务器。
-$notifyUrl = 'http://375dec79.ngrok.com/notify.php';
+$notifyUrl = 'http://practice.dandantuan.com/demo/qiniu/qiniu_sdk_notify.php';
 $force = false;
 
 $config = new \Qiniu\Config();
@@ -33,7 +33,7 @@ $base64URL = Qiniu\base64_urlSafeEncode('http://devtools.qiniu.com/qiniu.png');
 
 //水印参数
 $fops = "avthumb/mp4/s/640x360/vb/1.4m/image/" . $base64URL . "|saveas/"
-    . \Qiniu\base64_urlSafeEncode($bucket . $newKey);
+    . \Qiniu\base64_urlSafeEncode($bucket .":". $newKey);
 
 list($id, $err) = $pfop->execute($bucket, $key, $fops, $pipeline, $notifyUrl, $force);
 echo "\n====> pfop avthumb result: \n";
