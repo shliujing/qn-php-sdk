@@ -53,3 +53,7 @@ host+uri
 ## 添加水印
 
 ![](https://i.iamlj.com/19-02-20/102642.png)
+
+## 直播时间戳防盗链
+
+![](https://i.iamlj.com/19-03-19/220137.png)

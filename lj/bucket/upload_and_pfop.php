@@ -35,6 +35,7 @@ $policy = array(
     'callbackBody' => $callbackBody,
     'persistentOps' => $pfop,
 //    'deleteAfterDays' => 3,
+    'fsizeMin' => 1,
     'persistentNotifyUrl' => $notifyUrl,
     'persistentPipeline' => $pipeline
 

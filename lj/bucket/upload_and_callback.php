@@ -9,6 +9,10 @@ $secretKey = getenv('QINIU_SECRET_KEY');
 $bucket = getenv('QINIU_TEST_BUCKET');
 $auth = new Auth($accessKey, $secretKey);
 
+//上传文件的本地路径
+$filePath = '/Users/jingliu/Desktop/what-is-python..png';
+$key = 'test/test1205.png';
+
 // 上传文件到七牛后， 七牛将文件名和文件大小回调给业务服务器.
 // 可参考文档: http://developer.qiniu.com/docs/v6/api/reference/security/put-policy.html
 $policy = array(
@@ -16,10 +20,6 @@ $policy = array(
     'callbackBody' => 'filename=$(fname)&filesize=$(fsize)'
 );
 $uptoken = $auth->uploadToken($bucket, $key, 3600, $policy);
-
-//上传文件的本地路径
-$filePath = '/Users/jingliu/Desktop/what-is-python..png';
-$key = 'test/test1205.png';
 
 $uploadMgr = new UploadManager();
 
