@@ -16,15 +16,29 @@ $auth = new Auth($accessKey, $secretKey);
 $url = "http://ai.qiniuapi.com/v3/video/censor";
 $method = "POST";
 $host = "ai.qiniuapi.com";
-$body = "{ \"data\": { \"uri\": \"https://mars-assets.qnssl.com/scene.mp4\" }, \"params\": { \"scenes\": [ \"pulp\", \"terror\", \"politician\" ], \"cut_param\": { \"interval_msecs\": 5000 } } }";
+
+$body = array(
+    "data" => array(
+        "uri" => "https://mars-assets.qnssl.com/scene.mp4"
+    ),
+    "params" => array(
+        "scenes" => array("pulp", "terror", "politician"),
+        "cut_param" => array(
+            "interval_msecs" => 5000
+        )
+    )
+);
+$bodyJson = json_encode($body, JSON_UNESCAPED_SLASHES);
+
+//$bodyJson = "{ \"data\": { \"uri\": \"https://mars-assets.qnssl.com/scene.mp4\" }, \"params\": { \"scenes\": [ \"pulp\", \"terror\", \"politician\" ], \"cut_param\": { \"interval_msecs\": 5000 } } }";
 $contentType = "application/json";
 
 // 鉴权凭证
-$headers = $auth->authorizationV2($url, $method, $body, $contentType);
+$headers = $auth->authorizationV2($url, $method, $bodyJson, $contentType);
 $headers['Content-Type'] = $contentType;
 $headers['Host'] = $host;
 
-$response = Client::post($url, $body, $headers);
+$response = Client::post($url, $bodyJson, $headers);
 if ($response->ok()) {
     $r = $response->json();
     var_dump($r);
