@@ -4,6 +4,8 @@ require_once __DIR__ . '/../../autoload.php';
 use \Qiniu\Auth;
 use Qiniu\Http\Client;
 
+//  https://developer.qiniu.com/censor/api/5620/video-censor
+// 发起视频审核
 $accessKey = getenv('QINIU_ACCESS_KEY');
 $secretKey = getenv('QINIU_SECRET_KEY');
 
@@ -11,10 +13,10 @@ $secretKey = getenv('QINIU_SECRET_KEY');
 $auth = new Auth($accessKey, $secretKey);
 
 // 初始化请求参数
-$url = "http://ai.qiniuapi.com/v1/ocr/idcard";
+$url = "http://ai.qiniuapi.com/v3/video/censor";
 $method = "POST";
 $host = "ai.qiniuapi.com";
-$body = "{ \"data\": { \"uri\": \"http://test-pub.iamlj.com/test-idcard.jpg\" } }";
+$body = "{ \"data\": { \"uri\": \"https://mars-assets.qnssl.com/scene.mp4\" }, \"params\": { \"scenes\": [ \"pulp\", \"terror\", \"politician\" ], \"cut_param\": { \"interval_msecs\": 5000 } } }";
 $contentType = "application/json";
 
 // 鉴权凭证

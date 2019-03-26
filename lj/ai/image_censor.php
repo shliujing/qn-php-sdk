@@ -11,13 +11,14 @@ $secretKey = getenv('QINIU_SECRET_KEY');
 // 初始化Auth状态
 $auth = new Auth($accessKey, $secretKey);
 
-// 鉴权凭证
+// 初始化请求参数
 $url = "http://ai.qiniuapi.com/v1/image/censor";
 $method = "POST";
 $host = "ai.qiniuapi.com";
 $body = "{ \"data\": { \"uri\": \"https://mars-assets.qnssl.com/resource/gogopher.jpg\" }, \"params\": { \"scenes\": [ \"pulp\", \"terror\", \"politician\", \"ads\" ] } }";
 $contentType = "application/json";
 
+// 鉴权凭证
 $headers = $auth->authorizationV2($url, $method, $body, $contentType);
 $headers['Content-Type'] = $contentType;
 $headers['Host'] = $host;
