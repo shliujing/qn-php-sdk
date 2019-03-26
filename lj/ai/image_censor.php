@@ -25,8 +25,8 @@ $body = array(
     )
 );
 
-//$bodyJson = json_encode($body,JSON_UNESCAPED_SLASHES);
-$bodyJson = "{ \"data\": { \"uri\": \"https://mars-assets.qnssl.com/resource/gogopher.jpg\" }, \"params\": { \"scenes\": [ \"pulp\", \"terror\", \"politician\", \"ads\" ] } }";
+$bodyJson = json_encode($body,JSON_UNESCAPED_SLASHES);
+//$bodyJson = "{ \"data\": { \"uri\": \"https://mars-assets.qnssl.com/resource/gogopher.jpg\" }, \"params\": { \"scenes\": [ \"pulp\", \"terror\", \"politician\", \"ads\" ] } }";
 $contentType = "application/json";
 
 // 鉴权凭证
